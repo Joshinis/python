@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>WELCOME || Peoples</title>
+  <style type="text/css">
+    body {
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+.img {
+    text-align: center;
+    
+    }
+
+
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background-color:#FFC221;
+      color: white;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #1f76bd;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  {% include "site/navbar.html" %}
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-content">
+    <div class="container register-form">
+      <div class="form" >
+        <h1 style="text-align:center">Payment</h1>
+        <br>
+        <hr>
+          
+        </div>
+        <h2 style="text-align:center"><img class="img" src="static/assets/images/Googlepay.png" width="50px" height="50px" />Google Pay | <img class="img" src="static/assets/images/P.png" width="50px" height="50px" />Phonepay |<img class="img" src="static/assets/images/B.png" width="50px" height="50px" /> Bharath Pay</h2>
+<h5 style="text-align:center">Scan The Below QR To Pay</h5>
+<div class="form-group" align="center">
+
+<img class="img" src="static/assets/images/33.jpg" width="200px" height="200px" />
+</div>
+       
+         
+         
+          
+        
+      </div>
+    </div>
+        
+          
+     <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                {% render_field PaymentForm.pay_for class="form-control" placeholder="Enter The Amount Your Going To Pay" %}
+              </div>
+              
+         
+         
+                  
+      </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                {% render_field PaymentForm.amount class="form-control" placeholder="Enter The Amount Your Going To Pay" %}
+              </div>
+              
+         
+         
+            
+      </div>
+    </div>
+<center> <center><button type="submit" class="btnSubmit">PAY</button></center></center>
+  </form>
+<BR>
+  {% include "site/footer.html" %}
+</body>
+
+
+</html>

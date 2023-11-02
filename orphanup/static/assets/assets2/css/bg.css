@@ -1,0 +1,7 @@
+#bg{
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets2/images/main.jpg) top center;
+    background-size: cover;
+}
